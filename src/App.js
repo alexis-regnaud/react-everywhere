@@ -1,9 +1,9 @@
 import React from 'react';
 import {Provider} from "react-redux";
 
-import EntryScreen from './screens/EntryScreen';
-import store from "./utilities/storage/store";
-import Routing, {Router} from './utilities/routing/index';
+import EntryScreen from './common/screens/EntryScreen';
+import store from "./common/utilities/storage/store";
+import Routing, {Router} from './common/utilities/routing/index';
 
 const Route = Routing.Route;
 
