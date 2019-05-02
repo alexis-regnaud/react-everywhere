@@ -1,24 +1,20 @@
 import React from 'react';
 import {Provider} from "react-redux";
+import { Platform } from 'react-native'
 
-import EntryScreen from './common/screens/EntryScreen';
 import store from "./common/utilities/storage/store";
-import Routing, {Router} from './common/utilities/routing/index';
-
-const Route = Routing.Route;
+import {Navigation} from './common/utilities/routing/index';
 
 
 class App extends React.Component {
     render() {
+        console.log(Platform.OS)
         return (
             <Provider store={store}>
-                <Router>
-                    <Route path='/' component={EntryScreen}/>
-                </Router>
+                <Navigation/>
             </Provider>
         );
     }
 }
-
 
 export default App;
